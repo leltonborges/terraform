@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "dynamodb-dev" {
-  provider     = "aws.us-east-2"
+  provider     = aws.us-east-2
   name         = "GameScores"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "UserId"
@@ -13,5 +13,8 @@ resource "aws_dynamodb_table" "dynamodb-dev" {
   attribute {
     name = "GameTitle"
     type = "S"
+  }
+  tags = {
+    Name = "dynamodb-dev"
   }
 }

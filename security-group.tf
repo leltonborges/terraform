@@ -15,7 +15,7 @@ resource "aws_security_group" "acess-ssh" {
 }
 
 resource "aws_security_group" "acess-ssh-us-east-2" {
-  provider    = "aws.us-east-2"
+  provider    = aws.us-east-2
   name        = "acess-ssh"
   description = "Acesso ssh"
 
