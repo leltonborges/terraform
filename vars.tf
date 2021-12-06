@@ -9,7 +9,7 @@ variable "amis" {
 
 variable "cdir_acesso_ssh" {
   type = list(string)
-  default = [ "191.220.49.20/32" ]
+  default = [ "public_ip/32" ]
 }
 
 variable "instance_type" {
